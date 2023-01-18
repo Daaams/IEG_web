@@ -1,0 +1,649 @@
+/* Page CSS 
+ * 
+ * Css générale utilisé pour le site responsive et non-responsive
+*/
+#compte{
+    margin-top: 5px;
+    margin-bottom: 6px;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+nav img, footer img {
+    width: 42px;
+    height: 42px;
+}
+.entrée {
+    position: relative;
+    color: grey;
+}
+.entrée input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 2px solid grey;
+    background-color: transparent;
+    color: white;
+}
+.entrée label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    transition: .3s ease-out;
+}
+.entrée input:focus + span + label,
+.entrée input:valid + span + label {
+    transform: translateY(-20px);
+    font-size: 17px;
+}
+#schemas h1{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-decoration: underline;
+}
+p{
+    font-size: 20px;
+}
+.icon{
+    font-size: 2rem;
+    position: absolute;
+    right: 1em;
+    z-index: 9;
+    top: 45%;
+    transform: translateY(-50%);
+}
+input[type="text"]:valid + .icon::after {
+    content: "🟢";
+}
+input[type="text"]:invalid + .icon::after {
+    content: "🔴";
+}
+input[type="date"]:valid + .icon::after {
+    content: "🟢";
+}
+input[type="date"]:invalid + .icon::after {
+    content: "🔴";  
+}
+input[type="password"]:valid + .icon::after {
+    content: "🟢";
+}
+input[type="password"]:invalid + .icon::after {
+    content: "🔴";
+    border: none;
+}
+input[type="email"]:valid + .icon::after {
+    content: "🟢";
+}
+input[type="email"]:invalid + .icon::after {
+    content: "🔴";  
+}
+input:focus {
+     outline:  none;
+}
+#jeu h1{
+    color: aliceblue;
+    margin-left: 80px;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    text-decoration: underline;
+    font-family: 'Readex Pro', sans-serif;
+}
+/* Lien clicable dans le footer */
+.Ressources{
+    display: flex;
+    flex-direction: column;
+}
+.Ressources a{
+    padding-top: 10px;
+    color: black;
+    font-weight: bold;
+    text-decoration: underline;
+}
+/* Format PC */
+@media screen and (min-width: 800px){ 
+    body{
+        background-color: white;
+        overflow: unset;
+    }
+/*barre de navigation du haut de page*/
+    nav {
+        z-index: 10;
+        background-color: #aca297;
+        display: flex;
+        padding-left: 25px;
+        padding-right: 25px;
+        padding-top: 5px;
+        padding-bottom: 7px;
+        justify-content: space-between;
+        position: sticky;
+        top: 0px;
+    }
+    /* Animation lors du sourveloment d'une image dans la navigation */
+    #communaute a:hover{ 
+        border-bottom: 5px solid rgb(6, 91, 202);
+    }
+    #compte a{
+        margin-left: 20px;
+    }
+    #compte button:hover{
+        border: #111110;
+        transition: 1s;
+    }
+    #communaute a{
+        padding: 20px;
+    }
+    /* Contenu de la page SAE */
+    .image_jeu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        box-shadow: 5px 5px white;
+        align-items: center;
+        background-color: black;
+        border-radius: 30px;
+        width: 70%;
+        margin: auto;
+        padding: 50px;
+    }
+    .description-jeu{
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        align-self: center;
+        padding-left: 5%;
+        z-index: 1;
+    }
+    .description-jeu a{
+        margin-top: 30px;
+    }
+    .description-jeu > div{
+        display: flex;
+        flex-direction: row;
+    }
+    .description-jeu > div p{
+        padding-right: 10px;
+
+    }
+    .description-jeu > div > p + p +p {
+            color: grey;
+            text-decoration: line-through;
+    }
+    .description-jeu > div > p:nth-child(4) {
+        color: white;
+        text-decoration: none;
+    }
+    .description-jeu > a{
+        margin-left: 10%;
+    }
+    .image_jeu img{
+        border-radius: 30px;
+        width: 100%;
+        height: auto;
+    }
+    #jeu {
+        background-color: #111110;
+        padding-bottom: 100px;
+    }
+    #presentation{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5%;
+    }
+    #presentation h1{
+        color: black;
+        font-family: 'Readex Pro', sans-serif;
+        text-decoration: underline;
+    }
+    #presentation img{
+        margin-top: 30px;
+        height: 300px;
+        width: 270px;
+    }
+    #presentation p{
+        width: 45%;
+        margin-top: 80px;
+        margin-bottom: 80px;
+        padding-left: 60px;
+    }
+    #presentation a{
+        margin-bottom: 7%;
+    }
+    button a, button a:hover{
+        color: white;
+    } 
+/* Bas de page */
+    footer{
+        margin-top: 2%;
+        background-color:  #aca297; 
+        color: black;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+    }
+    .Réseaux {
+        display: flex;
+        justify-content: space-around;
+    }
+    .Réseaux a{
+        margin-top: 5px;
+        margin-bottom: 6px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+/* Formulaire d'inscription et de connexion */
+    #formulaire_inscription {
+        width: 40%;
+        margin: auto;
+        padding-top: 3%;
+        display: flex;
+        flex-direction: column;
+    }
+    #formulaire_connexion {
+        width: 40%;
+        margin: auto;
+        padding-top: 7%;
+        display: flex;
+        flex-direction: column;
+    }
+    #head_form{
+        display: flex;
+        justify-content: space-around;
+    }
+    #head_form img {
+        width: 42px;
+        height: 42px;
+    }
+    #form {
+        padding: 80px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background-color: #474441;
+        border-radius: 30px;
+    }
+    .soumettre{
+        width: 100%;
+        margin-top: 2em;
+        display: flex;
+        justify-content: space-around;
+    }
+    .soumettre > a{
+        margin-right: 10%;
+    }
+/* Contenu page descriptifEntreprise */
+    #descriptif p{
+        width: 70%;
+        margin: auto;
+        margin-top: 3%;
+        margin-bottom: 80px;
+        color: white;
+    }
+    #contexte{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 60%;
+        margin: auto;
+    }
+    #contexte > h2, #contexte > h1{
+        margin-top: 50px;
+        margin-bottom: 70px;
+    }
+    #contexte > a{
+        margin-bottom: 7%;
+    }
+    .image_jeu{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        box-shadow: 5px 5px rgb(59, 59, 59);
+        align-items: center;
+        background-color: #474441;
+        border-radius: 30px;
+        width: 70%;
+        margin: auto;
+        padding: 50px;
+    }
+/* Animation de fond pour les pages de connexion et inscription */
+    .circles{
+        margin-top: 10%;
+        width: 100%;
+        height: 1px;  
+    }
+    .circles li{
+        position: absolute;
+        display: inline-block;
+        list-style: none;
+        border-radius: 100%;
+        background: #3A3734;
+        opacity: 1;
+        z-index: -1;
+        animation: animate 5s linear infinite;
+    }    
+    .circles li:nth-child(1){
+        left: 5%;
+        width: 80px;
+        height: 80px;
+        animation-duration: 5s;
+    }
+    .circles li:nth-child(2){
+        left: 10%;
+        width: 20px;
+        height: 20px;
+        animation-duration: 12s;
+    }
+    .circles li:nth-child(3){
+        left: 15%;
+        width: 20px;
+        height: 20px;
+       animation-duration: 10s;
+    }    
+    .circles li:nth-child(4){
+        left: 20%;
+        width: 60px;
+        height: 60px;
+        animation-duration: 18s;
+    }    
+    .circles li:nth-child(5){
+        left: 25%;
+        width: 20px;
+        height: 20px;
+        animation-duration: 6s;
+    }
+    .circles li:nth-child(6){
+        left: 70%;
+        width: 110px;
+        height: 110px;
+        animation-duration: 9s;
+    }
+    .circles li:nth-child(7){
+        left: 75%;
+        width: 150px;
+        height: 150px;
+        animation-duration: 12s;
+    }
+    .circles li:nth-child(8){
+        left: 80%;
+        width: 25px;
+        height: 25px;
+        animation-duration: 25s;
+    }
+    .circles li:nth-child(9){
+        left: 85%;
+        width: 15px;
+        height: 15px;
+        animation-duration: 17s;
+    }
+    .circles li:nth-child(10){
+        left: 90%;
+        width: 90px;
+        height: 90px;
+        animation-duration: 11s;
+    }
+    @keyframes animate {
+        0%{
+            transform: translateY(0px);
+        }
+        100%{
+            transform: translateY(-1500px);
+        }
+    }
+/*pages schemas.html*/
+    #schemas{
+        width: 80%;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #schemas img{
+        width: 100%;
+        height: auto;
+    }
+/* Animation de glissade sur la page Description */
+    .animation{
+        margin-top: 3%;
+        width: 50%;
+        height: 180px;
+        overflow: hidden;
+    }
+    .slide{
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 50px;
+        font-size:60px;
+    }
+    .slide:nth-child(1){
+        animation: glissadegauche 5s;
+        color: yellow;
+    }
+    .slide:nth-child(2){
+        color: blue;
+        animation: glissadedroite 5s ;
+    }
+    .slide:nth-child(3){
+        color: burlywood;
+        animation: glissadegauche 5s ;
+    }
+    @keyframes glissadegauche{
+        0%{
+            transform: translateX(-100%);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+    @keyframes glissadedroite{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+    @keyframes glissadedroite{
+        0%{
+            transform: translateX(100%);
+        }
+        100%{
+            transform: translateX(0px);
+        }
+    }
+/*éléments responsifs à ne pas diffuser*/
+    #check{
+        display: none;
+    }
+    #communaute_responsive{
+        display: none;
+    } 
+    #menu_responsive{
+        display: none;
+    }
+    #menu > img{
+        display: none;
+    }
+    #jeu_responsive{
+        display: none;
+    }
+/*page des mentions légales*/
+    #mentions{
+        margin: 5%;
+        margin-bottom: 10%;
+    }
+    #mentions h1{
+        margin-bottom: 5%;
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
+/* Responsivité pour format téléphone */
+@media screen and (max-width: 800px){ 
+    body{
+        background-color: rgb(56, 51, 51);
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        background-color: #aca297;
+    }
+    #compte div a{
+        color: white;
+    }
+/*menu dépliant*/
+    #communaute_responsive li{
+        list-style-type: none;
+        background-color:  #6d655e;
+        width: 200px;
+        padding: 2%;
+        transition-property: background-color;
+        transition-timing-function: ease-out;
+        transition-duration: 0.4s;
+    }
+    #menu {
+        position: relative;
+        display: inline-block;
+    }
+    #communaute_responsive {
+        display: none;
+        margin-left:-2em;
+        position: absolute;
+        z-index: 2;
+    }
+    #communaute_responsive a {
+        color: white;
+        text-decoration: none;
+        display: block;
+    }
+    #communaute_responsive li:hover {
+        cursor: pointer;
+        background-color: burlywood;
+    }
+    input:checked+#menu  #communaute_responsive {
+        display: block;
+    }
+    #check{
+        width: 42px;
+        height: 42px;
+        position: fixed;
+        z-index: 1;
+        opacity: 0;
+    }
+/*mise en page des formulaires*/
+    #formulaire_inscription {
+        margin-top: 10%;
+    }
+    #formulaire_connexion {
+        margin-top: 10%;
+    }
+    #head_form > h2{
+        color: white;
+        text-align: center;
+        margin-bottom: 5%;
+    }
+    #head_form img {
+        display: none;
+    }
+    #form{
+        width: 80%;
+        margin: auto;
+        margin-top: 10%;
+        border: 2px solid white;
+        padding: 35px;  
+        border-radius: 30px;
+        background-color: #474441;
+    }
+    button{
+        border-radius: 2px;
+    }
+    .soumettre{
+        width: 100%;
+        margin-top: 2em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .soumettre > a+a{
+        margin-top: 10%;
+    }
+/*mise en page de la page d'accueil*/
+    main{
+        color: white;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    #jeu_responsive{
+        margin-top: 10%;
+    }
+    #jeu_responsive > div{
+        background-color: black;
+    }
+    #jeu_responsive img{
+        width: 50%;
+        border-radius: 30px;
+    }
+    #jeu_responsive > div > div {
+        display: flex;
+        flex-direction: row;
+    }
+    #jeu_responsive > div > div p {
+        padding-right: 15px;
+    }
+    #jeu_responsive > div, #presentation{
+        margin-top: 5%;
+        padding: 5%;
+        border-radius: 30px;
+    }
+/*page schemas.html*/
+    #schemas img {
+        width: 60%;
+        height: auto;
+    }
+/*mentions légales*/
+    #mentions h1{
+        margin-top: 10%;
+        margin-bottom: 10%;
+    }
+/*mise en page du pied de page*/
+    footer{
+        margin-top: 10%;
+        padding: 2%;
+        background-color:  #aca297; 
+        color: black;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;   
+    }
+    footer div {
+        margin-right: 5%;
+    }
+    .Réseaux{
+        display: flex;
+        flex-direction: column;
+    }
+/*éléments à ne pas diffuser*/
+    svg{
+        display: none;
+    }
+    #communaute{
+        display: none;
+    }
+    #jeu{
+        display: none;
+    }
+    #presentation img {
+        display: none;
+    }
+    #cont{
+        display: none;
+    }
+    .circles{
+        display: none;
+    }
+    .animation{
+        display: none;
+    }
+}
