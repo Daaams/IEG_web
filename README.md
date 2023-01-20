@@ -1,8 +1,4 @@
-# SAE web
-
-TANJI Zachary,  
-LEVRAULT Damien
-S1B
+# IEG
 
 **Informations sur l'utilisation du site.**
 
@@ -18,6 +14,7 @@ S1B
 - Il faut au minimum 8 caractères dont une majuscule et un caractères autre qu'une lettre pour pouvoir créer et utiliser un mot de passe valide
 - Il faut avoir minimum 16 ans pour se créer un compte (formulaire d'inscription)
 - L'email doit avoir le caractère @ et doit finir par .com
+- Les formulaires ne fonctionnent pas.
 
 **Site responsif**
 
